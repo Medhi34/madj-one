@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  margin: 2rem;
+}
+
+h1 {
+  color: rgb(2, 33, 170);
+  margin-bottom: 1rem;
+}
+
+#grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 1rem;
+  margin: 3rem auto;
+}
+
+.case {
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  width: 5rem;
+  height: 5rem;
+  background-color: #f5f5f5;
+  transition: background-color 0.3s;
+  
+
+  
+}
+
+.case:hover {
+  background-color: #e0e0e0;
+}
+
+#score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+p {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+p:first-of-type {
+  color: rgb(2, 33, 170);
+}
+
+#btnSoumettre {
+  background-color: rgb(2, 33, 170);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+#btnSoumettre:hover {
+  background-color: rgb(3, 49, 255);
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:500');
+.back{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background:url(madj.png) no-repeat top center #efeff1;
+  background-size:cover;
+}
+.thx{
+  position: fixed;
+  left:50%;
+  transform:translateX(-50%);
+  bottom: 15px;
+}
+nav{
+  width: 100%;
+  position: fixed;
+  top:50px;
+  text-align:center;
+}
+nav a{
+  font-family: 'Oswald', sans-serif;
+  font-weight:500;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:#16151b;
+  margin:0 15px;
+  font-size:16px;
+  letter-spacing:1px;
+  position:relative;
+  display:inline-block;
+}
+nav a:before{
+  content:'';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background:#16151b;
+  top:47%;
+  animation:out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+nav a:hover:before{
+  animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+
+}
+@keyframes in{
+  0%{
+    width: 0;
+    left:0;
+    right:auto;
+  }
+  100%{
+    left:0;
+    right:auto;
+    width: 100%;
+  }
+}
+@keyframes out{
+  0%{
+    width:100%;
+    left: auto;
+    right: 0;
+  }
+  100%{
+    width: 0;
+    left: auto;
+    right: 0;
+  }
+}
+@keyframes show{
+  0%{
+    opacity:0;
+    transform:translateY(-10px);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@for $i from 1 through 5 {
+  nav a:nth-child(#{$i}){
+    animation:show .2s #{$i*0.1+1}s ease 1 both;
+  }
+}
+
+
+main{
+  padding: 1rem;
+  background-color: #ecf0f3;
+}
+
+
+#champTexte {
+  width: 100%; /* La largeur peut être ajustée en fonction de la conception */
+  padding: 10px; /* L'espacement interne (padding) peut être ajusté en fonction de la conception */
+  font-size: 16px; /* La taille de la police peut être ajustée en fonction de la conception */
+  box-sizing: border-box; /* Inclure la bordure et le rembourrage dans la largeur totale */
+}
