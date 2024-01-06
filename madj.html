@@ -4,32 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style2.css" />
     <title>Le MAdj</title>
   </head>
   <body>
-    <h1>Le MAdj</h1>
+    <header>
+      <h1>Le MAdj</h1>
+    </header>
 
-    <form id="monFormulaire">
-      
-      <input type="text" id="champTexte" placeholder="Taille de la Table" name="champTexte" required>
-      <button type="button" id="btnSoumettre">Valider</button>
-    </form>
+    <main>
+      <form id="monFormulaire">
+        <label for="champTexte">Taille de la Table :</label>
+        <input type="text" id="champTexte" name="champTexte" placeholder="Entrez la taille" required />
+        <button type="button" id="btnSoumettre">Valider</button>
+      </form>
 
-
-    <div id="grid">
-
-    </div>
+      <div id="grid"></div>
     
-    <div id="score">
-      <p>Joueur <span id="joueur">1</span></p>
-      <p>Score Joueur 1 : <span id="score1">0</span></p>
-      <p>Score Joueur 2 : <span id="score2">0</span></p>
-      <h1 style="text-align: center;"><span id="v1">0</span>-<span id="scoreNul">0</span>-<span id="v2">0</span></h1>
-    </div>
+      <div id="score">
+        <p>Joueur <span id="joueur">1</span></p>
+        <p>Score Joueur 1 : <span id="score1">0</span></p>
+        <p>Score Joueur 2 : <span id="score2">0</span></p>
+        <h2><span id="v1">0</span> - <span id="scoreNul">0</span> - <span id="v2">0</span></h2>
+      </div>
+    </main>
+
     <script src="./jquery-3.6.4.min.js"></script>
     <script src="./app.js"></script>
-    
-
   </body>
 </html>
